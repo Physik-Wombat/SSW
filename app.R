@@ -4,21 +4,21 @@ ui <- navbarPage(
   
   tabPanel(
     strong("Versuch 1"),
-    titlePanel(h4("GÃ¼ltigkeit des Ohmâschen Gesetz")),
+    titlePanel(h4("Gueltigkeit des Ohmschen Gesetz")),
     
     
     tabsetPanel(
       tabPanel(
         strong("Versuch 1A"),
         
-        titlePanel(h4("NetzgerÃ¤t als Spannungsquelle")),
+        titlePanel(h4("Netzgeraet als Spannungsquelle")),
         br(),
         sidebarPanel(
           "",
           
           sliderInput(
             inputId = "slider",
-            label = "VerÃ¤ndern Sie die Spannung:",
+            label = "Veraendern Sie die Spannung:",
             min = 0,
             max = 20,
             value = 0,
@@ -122,13 +122,13 @@ ui <- navbarPage(
       
       tabPanel(
         strong("Versuch 1B"),
-        titlePanel(h4("NetzgerÃ¤t als Stromquelle")),
+        titlePanel(h4("Netzgeraet als Stromquelle")),
         br(),
         sidebarPanel(
           "",
           sliderInput(
             inputId = "radio",
-            label = "VerÃ¤ndern Sie die StromstÃ¤rke:",
+            label = "Veraendern Sie die Stromstaerke:",
             min = 0,
             max = 200,
             value = 0,
@@ -242,23 +242,23 @@ ui <- navbarPage(
   
   tabPanel(
     strong("Versuch 2"),
-    titlePanel(h4("Kirchhoffâsche Regeln")),
+    titlePanel(h4("Kirchhoffsche Regeln")),
     sidebarPanel(
       radioButtons(
         "zozo",
-        "Kirchhoffâsche Regel:",
+        "Kirchhoffsche Regel:",
         choices = c(
-          "Kirchhoffâsche Maschenregel",
-          "Kirchhoffâsche Knotenregel Strommessung",
-          "Kirchhoffâsche Knotenregel Spannungsmessung"
+          "Kirchhoffsche Maschenregel",
+          "Kirchhoffsche Knotenregel Strommessung",
+          "Kirchhoffsche Knotenregel Spannungsmessung"
           
         ),
         
-        selected = "Kirchhoffâsche Maschenregel"
+        selected = "Kirchhoffsche Maschenregel"
       )
     ),
     mainPanel(
-      conditionalPanel("input.zozo=='Kirchhoffâsche Maschenregel'",
+      conditionalPanel("input.zozo=='Kirchhoffsche Maschenregel'",
                        ((
                          img(
                            src = "Versuch2Maschenregel.jpg",
@@ -269,7 +269,7 @@ ui <- navbarPage(
     ),
     
     mainPanel(
-      conditionalPanel("input.zozo=='Kirchhoffâsche Knotenregel Strommessung'",
+      conditionalPanel("input.zozo=='Kirchhoffsche Knotenregel Strommessung'",
                        ((
                          img(
                            src = "Versuch2KnotenregelStrom.jpg",
@@ -281,7 +281,7 @@ ui <- navbarPage(
     
     mainPanel(
       conditionalPanel(
-        "input.zozo=='Kirchhoffâsche Knotenregel Spannungsmessung'",
+        "input.zozo=='Kirchhoffsche Knotenregel Spannungsmessung'",
         ((
           img(
             src = "Versuch2KnotenregelSpannung.jpg",
@@ -304,15 +304,15 @@ ui <- navbarPage(
         "wolo",
         "Versuche:",
         choices = c(
-          "Metallgriffe mit lockeren HÃ¤nden gehalten",
-          "Metallgriffe fest mit trockenen HÃ¤nden gehalten",
-          "Metallgriffe fest mit nassen HÃ¤nden gehalten"
+          "Metallgriffe mit lockeren Haenden gehalten",
+          "Metallgriffe fest mit trockenen Haenden gehalten",
+          "Metallgriffe fest mit nassen Haenden gehalten"
         ),
-        selected = "Metallgriffe mit lockeren HÃ¤nden gehalten"
+        selected = "Metallgriffe mit lockeren Haenden gehalten"
       )
     ),
     
-    mainPanel(conditionalPanel("input.wolo=='Metallgriffe mit lockeren HÃ¤nden gehalten'",
+    mainPanel(conditionalPanel("input.wolo=='Metallgriffe mit lockeren Haenden gehalten'",
                                ((
                                  img(
                                    src = "Versuch3locker.jpg",
@@ -322,7 +322,7 @@ ui <- navbarPage(
                                )))),
     
     mainPanel(conditionalPanel(
-      "input.wolo=='Metallgriffe fest mit trockenen HÃ¤nden gehalten'",
+      "input.wolo=='Metallgriffe fest mit trockenen Haenden gehalten'",
       ((
         img(
           src = "Versuch3fest.jpg",
@@ -332,7 +332,7 @@ ui <- navbarPage(
       ))
     )),
     
-    mainPanel(conditionalPanel("input.wolo=='Metallgriffe fest mit nassen HÃ¤nden gehalten'",
+    mainPanel(conditionalPanel("input.wolo=='Metallgriffe fest mit nassen Haenden gehalten'",
                                ((
                                  img(
                                    src = "Versuch3festnass.jpg",
@@ -346,7 +346,7 @@ ui <- navbarPage(
   
   tabPanel(
     strong("Versuch 4"),
-    titlePanel(h4("TemperaturabhÃ¤ngiger Widerstand")),
+    titlePanel(h4("Temperaturabhaengiger Widerstand")),
     br(),
     mainPanel(
       tags$video(
